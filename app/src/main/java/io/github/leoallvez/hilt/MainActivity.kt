@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import dagger.hilt.android.AndroidEntryPoint
+import io.github.leoallvez.hilt.database.DataBaseService
 import io.github.leoallvez.hilt.database.DatabaseAdapter
 import javax.inject.Inject
 
@@ -18,5 +19,10 @@ class MainActivity : AppCompatActivity() {
 
         Log.d(TAG, "DatabaseAdapter: $databaseAdapter")
         databaseAdapter.log("Hello Hilt")
+    }
+
+    @Inject
+    fun directToDataBase(dataBaseService: DataBaseService) {
+        dataBaseService.log("Method injection")
     }
 }
