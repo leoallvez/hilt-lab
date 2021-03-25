@@ -5,10 +5,11 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ActivityComponent
+import dagger.hilt.android.components.ViewComponent
 import io.github.leoallvez.hilt.network.*
 
 @Module
-@InstallIn(ActivityComponent::class)
+@InstallIn(ActivityComponent::class, ViewComponent::class)
 /**abstract*/ class NetworkModule {
 
 //    @Binds
