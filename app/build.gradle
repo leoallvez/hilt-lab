@@ -46,7 +46,16 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_viewmodel_version"
+    kapt "androidx.hilt:hilt-compiler:$hilt_viewmodel_version"
+
+    implementation "androidx.fragment:fragment-ktx:$fragment_version"
+    kapt "androidx.fragment:fragment-ktx:$fragment_version"
+
     testImplementation 'junit:junit:4.+'
+
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
